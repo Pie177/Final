@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class StitchNode : NodeBaseClass {
 
@@ -13,7 +14,13 @@ public class StitchNode : NodeBaseClass {
 
     public override void DrawGUI(int winID)
     {
-        BaseDraw();
+        if (GUILayout.Button("Edit"))
+        {
+            EditStitch editWindow = EditorWindow.GetWindow<EditStitch>();
+
+            editWindow.Init(myStitch);
+        }
+        base.BaseDraw();
     }
 
     public override void AttachComplete(NodeBaseClass winID)
