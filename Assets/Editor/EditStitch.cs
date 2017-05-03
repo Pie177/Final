@@ -25,6 +25,16 @@ public class EditStitch : EditorWindow {
         SerializedProperty performers = so.FindProperty("performers");
         EditorGUILayout.PropertyField(performers, true);
         so.ApplyModifiedProperties();
-        
+
+        SerializedProperty dialogs = so.FindProperty("dialogs");
+        EditorGUILayout.PropertyField(dialogs, true);
+        so.ApplyModifiedProperties();
+
+        SerializedProperty yarns = so.FindProperty("yarns");
+        EditorGUILayout.PropertyField(yarns, true);
+        so.ApplyModifiedProperties();
+
+        myStitch.status = (Stitch.stitchStatus)EditorGUILayout.EnumPopup("Status", myStitch.status);
+
     }
 }

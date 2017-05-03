@@ -144,6 +144,7 @@
     <Compile Include="Assets\Editor\EditStitch.cs" />
     <Compile Include="Assets\Editor\NodeBaseClass.cs" />
     <Compile Include="Assets\Editor\NodeExample.cs" />
+    <Compile Include="Assets\Editor\NodeLocation.cs" />
     <Compile Include="Assets\Editor\StitchNode.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
